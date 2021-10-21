@@ -366,14 +366,31 @@ input[type='radio']:checked + label {
 
 .radio-btns {
   margin-top: 15px;
+  display: flex;
 }
 
-.radio-btns span:first-child {
+.radio-btns div:first-child {
   margin-right: 15px;
 }
 
 .caps {
   text-transform: capitalize !important;
+}
+
+@media screen and (max-width: 420px) {
+  .radio-btns {
+    display: block;
+  }
+
+  .radio-btns div:first-child {
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+
+  .account,
+  .socials {
+    margin-right: 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -417,7 +434,7 @@ input[type='radio']:checked + label {
   }
 }
 
-@media screen and (min-width: 960px) and (max-width: 1240px) {
+@media screen and (min-width: 960px) and (max-width: 1290px) {
   .hero {
     /* display: none; */
     width: 40%;

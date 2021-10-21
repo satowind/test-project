@@ -60,7 +60,7 @@ function App() {
                   <label>Select a verification method</label>
                   <div className='radio-btns'>
                     {['BVN', 'Personal Account Number'].map((opt) => (
-                      <span>
+                      <div>
                         <input
                           type='radio'
                           onClick={() => selectMethod(opt)}
@@ -70,7 +70,7 @@ function App() {
                         <label for={opt} className='radio-btn'>
                           {opt}
                         </label>
-                      </span>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -227,12 +227,12 @@ function App() {
                     </label>
                     <div className='radio-btns'>
                       {['Yes', 'No'].map((opt) => (
-                        <span>
+                        <div>
                           <input type='radio' name='pos' id={opt} />
                           <label for={opt} className='radio-btn'>
                             {opt}
                           </label>
-                        </span>
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -243,7 +243,7 @@ function App() {
             <div className='text-right' style={{ marginTop: '30px' }}>
               <button
                 className='btn btn-primary'
-                onClick={() => setCurrentTab(currentTab + 1)}
+                onClick={() => currentTab < 3 && setCurrentTab(currentTab + 1)}
               >
                 {currentTab === 2
                   ? 'Confirm Social Handles'
